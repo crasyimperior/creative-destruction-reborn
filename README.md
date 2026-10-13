@@ -1,87 +1,113 @@
-# Creative Destruction Reborn
+<div align="center">
 
-Play **Creative Destruction** (PC, NetEase, servers closed in June 2022) again, offline, on your own computer.
+# 💥 Creative Destruction Reborn
 
-This package contains **no game files**. It is a small local server plus a client mod that you install
-into **your own copy** of the official PC game.
+**Rejoue à Creative Destruction PC, hors ligne, sur ton propre ordinateur.**<br>
+*Play Creative Destruction PC again, offline, on your own computer.*
 
-[Français](#français) · [English](#english)
+![Status](https://img.shields.io/badge/status-early%20access-orange?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Game](https://img.shields.io/badge/game-3.0.210.0-8A2BE2?style=for-the-badge)
+
+### [⬇️ Télécharger / Download](https://github.com/crasyimperior/creative-destruction-reborn/releases/latest)
+
+[🇫🇷 Français](#-français) · [🇬🇧 English](#-english)
+
+</div>
+
+> [!IMPORTANT]
+> Ce dépôt ne contient **aucun fichier du jeu**. C'est un petit serveur local + un mod client à installer
+> dans **ta propre copie** du jeu PC officiel (serveurs fermés en juin 2022).<br>
+> *This repository contains **no game files**: a small local server + a client mod for **your own copy** of the game.*
 
 ---
 
-## Français
+## 🇫🇷 Français
 
-### Ce qu'il faut
+### 📋 Ce qu'il faut
 
-- Le jeu **Creative Destruction PC** officiel (version `3.0.210.0`), installé dans un dossier
-  (celui qui contient `client.exe` et `script.npk`).
-- **Python 3.8 ou plus récent** : <https://www.python.org/downloads/>
-  Pendant l'installation de Python, coche **« Add python.exe to PATH »**.
-- Une connexion internet **pour l'installation uniquement** (elle télécharge le module Python `pycryptodome`).
+| | |
+|---|---|
+| 🎮 **Le jeu** | Creative Destruction PC officiel, version `3.0.210.0` (le dossier avec `client.exe` et `script.npk`) |
+| 🐍 **Python 3.8+** | <https://www.python.org/downloads/> — coche **« Add python.exe to PATH »** |
+| 🌐 **Internet** | Uniquement pendant l'installation (téléchargement de `pycryptodome`) |
 
-### Vérifier ta copie du jeu
+<details>
+<summary>🔍 <b>Vérifier ta copie du jeu</b></summary>
+<br>
 
 Le jeu n'est plus distribué officiellement. Si tu as gardé ton installation, vérifie que c'est la bonne version
-avec les empreintes SHA-256 ci-dessous (dans PowerShell : `Get-FileHash <fichier>`) :
+(dans PowerShell : `Get-FileHash <fichier>`) :
 
 | Fichier | SHA-256 |
 |---|---|
 | zip de l'installateur du jeu | `3f5008c3c3c953f005dbb3681b2a24ae4abd71199435c8948b60fb7173a17be5` |
 | `script.npk` (15 607 644 octets) | `f47bcc7cbb261897072a53af269fc839a54e7cfada9d9a0268d8b7165b1738e1` |
 
-### Installation
+</details>
 
-1. Décompresse l'archive **dans le dossier du jeu**, à côté de `client.exe`.
-   Tu dois obtenir :
-   ```
-   Creative Destruction\
-     client.exe
-     script.npk
-     ...
-     reborn\
-     Installer - Install.bat
-     Lancer hors ligne - Play Offline.bat
-     Desinstaller - Uninstall.bat
-     README.md
-   ```
-2. Double-clique sur **`Installer - Install.bat`**.
-   Il désactive la mise à jour du jeu (erreur 902) et installe le mod dans `Documents\`.
-   Les fichiers d'origine sont sauvegardés dans `reborn\backup\`.
+### 🛠️ Installation
 
-### Jouer
+**1.** Décompresse l'archive **dans le dossier du jeu**, à côté de `client.exe` :
 
-1. Double-clique sur **`Lancer hors ligne - Play Offline.bat`**.
-   Une fenêtre noire réduite (le serveur) s'ouvre, puis le jeu.
-   **Ne ferme pas et ne clique pas dans la fenêtre du serveur pendant que tu joues.**
-2. Dans le jeu : **Confirmer** → **Jouer**. Crée ton personnage si on te le demande.
-3. Pour une partie : **Lancer**. Tu arrives sur l'île de départ.
-   Appuie sur **²** (touche sous Échap) pour ouvrir la console, tape **`start`** puis **Entrée** :
-   compte à rebours, présentation des joueurs, bus, puis saut.
+```
+📁 Creative Destruction\
+ ├─ client.exe
+ ├─ script.npk
+ ├─ ...
+ ├─ 📁 reborn\
+ ├─ Installer - Install.bat
+ ├─ Lancer hors ligne - Play Offline.bat
+ ├─ Desinstaller - Uninstall.bat
+ └─ README.md
+```
 
-### Ce qui fonctionne
+**2.** Double-clique sur **`Installer - Install.bat`**.
+Il désactive la mise à jour du jeu (erreur 902) et installe le mod dans `Documents\`.
+Les fichiers d'origine sont sauvegardés dans `reborn\backup\`.
 
-- Connexion sans compte NetEase, lobby, profil, changement de pseudo
-- 999 999 999 diamants / or / étoiles, tous les skins et objets permanents débloqués
-- Équiper tenues et skins, bouton ♂/♀ dans le profil pour changer de personnage
-- Partie : île de départ, compte à rebours, présentation, bus, saut en parachute, pioche
+### 🎮 Jouer
 
-### Prévu pour la suite
+**1.** Double-clique sur **`Lancer hors ligne - Play Offline.bat`** : le serveur (fenêtre noire réduite) puis le jeu s'ouvrent.
 
-- **Bots** : des adversaires contrôlés par le serveur qui se déplacent, ramassent du butin et attaquent.
-- **Une vraie partie battle royale contre des bots** : du bus jusqu'au dernier survivant, avec écran de victoire.
-- **Butin au sol** : armes, munitions, soins et matériaux répartis sur la carte, qu'on peut ramasser.
-- **Armes et dégâts** : tir, points de vie, armure, éliminations.
-- **Zone** qui se resserre pendant la partie.
-- **Construction** gérée par le serveur.
+> [!WARNING]
+> Ne ferme pas et **ne clique pas** dans la fenêtre du serveur pendant que tu joues.
 
-Pas prévu pour l'instant : amis, classement, boutique (inutile : tout est déjà débloqué).
+**2.** Dans le jeu : **Confirmer** → **Jouer**. Crée ton personnage si on te le demande.
 
-### Désinstaller
+**3.** Pour une partie : **Lancer** → tu arrives sur l'île de départ.
+Appuie sur <kbd>²</kbd> (sous <kbd>Échap</kbd>), tape `start` puis <kbd>Entrée</kbd> :
+compte à rebours → présentation des joueurs → bus → saut 🪂
+
+### ✅ Ce qui fonctionne
+
+- 🔓 Connexion sans compte NetEase, lobby, profil, changement de pseudo
+- 💎 999 999 999 diamants / or / étoiles, **tous les skins et objets débloqués**
+- 👕 Équiper tenues et skins, bouton ♂/♀ dans le profil pour changer de personnage
+- 🪂 Partie : île de départ, compte à rebours, présentation, bus, saut en parachute, pioche
+
+### 🗺️ Prévu pour la suite
+
+| | Fonctionnalité | Description |
+|:-:|---|---|
+| 🤖 | **Bots** | Adversaires contrôlés par le serveur qui se déplacent, ramassent du butin et attaquent |
+| 🏆 | **Vraie partie battle royale** | Contre des bots, du bus jusqu'au dernier survivant, avec écran de victoire |
+| 🎁 | **Butin au sol** | Armes, munitions, soins et matériaux répartis sur la carte |
+| 🔫 | **Armes et dégâts** | Tir, points de vie, armure, éliminations |
+| 🌪️ | **Zone** | Qui se resserre pendant la partie |
+| 🧱 | **Construction** | Gérée par le serveur |
+
+<sub>Pas prévu pour l'instant : amis, classement, boutique (inutile : tout est déjà débloqué).</sub>
+
+### 🗑️ Désinstaller
 
 Double-clique sur **`Desinstaller - Uninstall.bat`** : les fichiers d'origine du jeu sont restaurés.
 Tu peux ensuite supprimer le dossier `reborn` et les fichiers `.bat`.
 
-### Problèmes fréquents
+<details>
+<summary>❓ <b>Problèmes fréquents</b></summary>
+<br>
 
 | Problème | Solution |
 |---|---|
@@ -90,72 +116,86 @@ Tu peux ensuite supprimer le dossier `reborn` et les fichiers `.bat`.
 | « Connexion perdue » en partie | Tu as cliqué dans la fenêtre du serveur (ça la met en pause). Ne clique pas dedans. |
 | Erreur 902 au lancement | Relance `Installer - Install.bat`. |
 
-Tes données (pseudo, équipement) sont dans `reborn\server\save\player.json`.
-Les journaux sont dans `reborn\server\logs\` et `Documents\offline_mod.log`.
+📁 Tes données (pseudo, équipement) : `reborn\server\save\player.json`<br>
+📄 Journaux : `reborn\server\logs\` et `Documents\offline_mod.log`
+
+</details>
 
 ---
 
-## English
+## 🇬🇧 English
 
-### Requirements
+### 📋 Requirements
 
-- The official **Creative Destruction PC** game (version `3.0.210.0`), installed in a folder
-  (the one containing `client.exe` and `script.npk`).
-- **Python 3.8 or newer**: <https://www.python.org/downloads/>
-  During setup, tick **"Add python.exe to PATH"**.
-- An internet connection **for installation only** (it downloads the Python package `pycryptodome`).
+| | |
+|---|---|
+| 🎮 **The game** | Official Creative Destruction PC, version `3.0.210.0` (the folder with `client.exe` and `script.npk`) |
+| 🐍 **Python 3.8+** | <https://www.python.org/downloads/> — tick **"Add python.exe to PATH"** |
+| 🌐 **Internet** | Only during install (downloads `pycryptodome`) |
 
-### Check your copy of the game
+<details>
+<summary>🔍 <b>Check your copy of the game</b></summary>
+<br>
 
 The game is no longer officially distributed. If you kept your installation, check it is the right version
-with the SHA-256 hashes below (in PowerShell: `Get-FileHash <file>`):
+(in PowerShell: `Get-FileHash <file>`):
 
 | File | SHA-256 |
 |---|---|
 | game installer zip | `3f5008c3c3c953f005dbb3681b2a24ae4abd71199435c8948b60fb7173a17be5` |
 | `script.npk` (15,607,644 bytes) | `f47bcc7cbb261897072a53af269fc839a54e7cfada9d9a0268d8b7165b1738e1` |
 
-### Install
+</details>
 
-1. Extract the archive **into the game folder**, next to `client.exe` (see the layout above).
-2. Double-click **`Installer - Install.bat`**.
-   It disables the game's update check (error 902) and installs the mod into `Documents\`.
-   The original files are backed up into `reborn\backup\`.
+### 🛠️ Install
 
-### Play
+**1.** Extract the archive **into the game folder**, next to `client.exe` (see the layout above).
 
-1. Double-click **`Lancer hors ligne - Play Offline.bat`**.
-   A minimized black window (the server) opens, then the game.
-   **Do not close it and do not click inside it while playing.**
-2. In game: **Confirm** → **Play**. Create your character if asked.
-3. For a match: **Start**. You land on the starting island.
-   Press **`²`** (key under Esc on AZERTY keyboards) to open the console, type **`start`** and **Enter**:
-   countdown, players presentation, bus, then jump.
+**2.** Double-click **`Installer - Install.bat`**.
+It disables the game's update check (error 902) and installs the mod into `Documents\`.
+The original files are backed up into `reborn\backup\`.
 
-### Working
+### 🎮 Play
 
-- Login without a NetEase account, lobby, profile, rename
-- 999,999,999 diamonds / gold / stars, every permanent skin and item unlocked
-- Equip outfits and skins, ♂/♀ button on the profile page to switch character
-- Match: starting island, countdown, presentation, bus, parachute jump, pickaxe
+**1.** Double-click **`Lancer hors ligne - Play Offline.bat`**: the server (minimized black window) then the game open.
 
-### Planned
+> [!WARNING]
+> Do not close the server window and **do not click inside it** while playing.
 
-- **Bots**: server-controlled opponents that move around, pick up loot and fight.
-- **A real battle royale match against bots**: from the bus to the last one standing, with a victory screen.
-- **Ground loot**: weapons, ammo, heals and materials spread across the map, ready to pick up.
-- **Weapons and damage**: shooting, health, armor, eliminations.
-- **Storm** shrinking during the match.
-- **Building** handled by the server.
+**2.** In game: **Confirm** → **Play**. Create your character if asked.
 
-Not planned for now: friends, leaderboards, shop (useless anyway: everything is unlocked).
+**3.** For a match: **Start** → you land on the starting island.
+Press <kbd>²</kbd> (key under <kbd>Esc</kbd> on AZERTY keyboards), type `start` then <kbd>Enter</kbd>:
+countdown → players presentation → bus → jump 🪂
 
-### Uninstall
+### ✅ Working
+
+- 🔓 Login without a NetEase account, lobby, profile, rename
+- 💎 999,999,999 diamonds / gold / stars, **every skin and item unlocked**
+- 👕 Equip outfits and skins, ♂/♀ button on the profile page to switch character
+- 🪂 Match: starting island, countdown, presentation, bus, parachute jump, pickaxe
+
+### 🗺️ Planned
+
+| | Feature | Description |
+|:-:|---|---|
+| 🤖 | **Bots** | Server-controlled opponents that move around, pick up loot and fight |
+| 🏆 | **Real battle royale match** | Against bots, from the bus to the last one standing, with a victory screen |
+| 🎁 | **Ground loot** | Weapons, ammo, heals and materials spread across the map |
+| 🔫 | **Weapons and damage** | Shooting, health, armor, eliminations |
+| 🌪️ | **Storm** | Shrinking during the match |
+| 🧱 | **Building** | Handled by the server |
+
+<sub>Not planned for now: friends, leaderboards, shop (useless anyway: everything is unlocked).</sub>
+
+### 🗑️ Uninstall
 
 Double-click **`Desinstaller - Uninstall.bat`**: the original game files are restored.
 Then you can delete the `reborn` folder and the `.bat` files.
 
-### Troubleshooting
+<details>
+<summary>❓ <b>Troubleshooting</b></summary>
+<br>
 
 | Problem | Fix |
 |---|---|
@@ -164,12 +204,16 @@ Then you can delete the `reborn` folder and the `.bat` files.
 | "Connection lost" in a match | You clicked inside the server window (it pauses it). Don't click in it. |
 | Error 902 at startup | Run `Installer - Install.bat` again. |
 
-Your data (name, equipment) lives in `reborn\server\save\player.json`.
-Logs: `reborn\server\logs\` and `Documents\offline_mod.log`.
+📁 Your data (name, equipment): `reborn\server\save\player.json`<br>
+📄 Logs: `reborn\server\logs\` and `Documents\offline_mod.log`
+
+</details>
 
 ---
 
-### Contents
+<details>
+<summary>📦 <b>Contents</b></summary>
+<br>
 
 | Path | What |
 |---|---|
@@ -180,4 +224,10 @@ Logs: `reborn\server\logs\` and `Documents\offline_mod.log`.
 | `reborn/client_mod/annoucement.txt` | the welcome message |
 | `reborn/tools/install.py` | installer / uninstaller |
 
-Fan project for game preservation, not affiliated with NetEase. You need your own copy of the game.
+</details>
+
+<div align="center">
+<br>
+<sub>❤️ Projet de fans pour la préservation du jeu, non affilié à NetEase. Il te faut ta propre copie du jeu.<br>
+Fan project for game preservation, not affiliated with NetEase. You need your own copy of the game.</sub>
+</div>
