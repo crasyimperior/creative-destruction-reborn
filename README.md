@@ -65,10 +65,16 @@ avec les empreintes SHA-256 ci-dessous (dans PowerShell : `Get-FileHash <fichier
 - Équiper tenues et skins, bouton ♂/♀ dans le profil pour changer de personnage
 - Partie : île de départ, compte à rebours, présentation, bus, saut en parachute, pioche
 
-### Pas encore
+### Prévu pour la suite
 
-Ennemis / bots, butin, armes ramassables, zone, dégâts, construction côté serveur, amis, classement,
-boutique (les achats ne servent à rien : tout est déjà débloqué).
+- **Bots** : des adversaires contrôlés par le serveur qui se déplacent, ramassent du butin et attaquent.
+- **Une vraie partie battle royale contre des bots** : du bus jusqu'au dernier survivant, avec écran de victoire.
+- **Butin au sol** : armes, munitions, soins et matériaux répartis sur la carte, qu'on peut ramasser.
+- **Armes et dégâts** : tir, points de vie, armure, éliminations.
+- **Zone** qui se resserre pendant la partie.
+- **Construction** gérée par le serveur.
+
+Pas prévu pour l'instant : amis, classement, boutique (inutile : tout est déjà débloqué).
 
 ### Désinstaller
 
@@ -133,10 +139,16 @@ with the SHA-256 hashes below (in PowerShell: `Get-FileHash <file>`):
 - Equip outfits and skins, ♂/♀ button on the profile page to switch character
 - Match: starting island, countdown, presentation, bus, parachute jump, pickaxe
 
-### Not yet
+### Planned
 
-Enemies / bots, loot, weapons, storm, damage, server-side building, friends, leaderboards,
-shop (useless anyway: everything is unlocked).
+- **Bots**: server-controlled opponents that move around, pick up loot and fight.
+- **A real battle royale match against bots**: from the bus to the last one standing, with a victory screen.
+- **Ground loot**: weapons, ammo, heals and materials spread across the map, ready to pick up.
+- **Weapons and damage**: shooting, health, armor, eliminations.
+- **Storm** shrinking during the match.
+- **Building** handled by the server.
+
+Not planned for now: friends, leaderboards, shop (useless anyway: everything is unlocked).
 
 ### Uninstall
 
