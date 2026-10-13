@@ -19,6 +19,16 @@ into **your own copy** of the official PC game.
   Pendant l'installation de Python, coche **« Add python.exe to PATH »**.
 - Une connexion internet **pour l'installation uniquement** (elle télécharge le module Python `pycryptodome`).
 
+### Vérifier ta copie du jeu
+
+Le jeu n'est plus distribué officiellement. Si tu as gardé ton installation, vérifie que c'est la bonne version
+avec les empreintes SHA-256 ci-dessous (dans PowerShell : `Get-FileHash <fichier>`) :
+
+| Fichier | SHA-256 |
+|---|---|
+| zip de l'installateur du jeu | `3f5008c3c3c953f005dbb3681b2a24ae4abd71199435c8948b60fb7173a17be5` |
+| `script.npk` (15 607 644 octets) | `f47bcc7cbb261897072a53af269fc839a54e7cfada9d9a0268d8b7165b1738e1` |
+
 ### Installation
 
 1. Décompresse l'archive **dans le dossier du jeu**, à côté de `client.exe`.
@@ -88,6 +98,16 @@ Les journaux sont dans `reborn\server\logs\` et `Documents\offline_mod.log`.
 - **Python 3.8 or newer**: <https://www.python.org/downloads/>
   During setup, tick **"Add python.exe to PATH"**.
 - An internet connection **for installation only** (it downloads the Python package `pycryptodome`).
+
+### Check your copy of the game
+
+The game is no longer officially distributed. If you kept your installation, check it is the right version
+with the SHA-256 hashes below (in PowerShell: `Get-FileHash <file>`):
+
+| File | SHA-256 |
+|---|---|
+| game installer zip | `3f5008c3c3c953f005dbb3681b2a24ae4abd71199435c8948b60fb7173a17be5` |
+| `script.npk` (15,607,644 bytes) | `f47bcc7cbb261897072a53af269fc839a54e7cfada9d9a0268d8b7165b1738e1` |
 
 ### Install
 
