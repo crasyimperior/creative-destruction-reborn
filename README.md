@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="docs/banner.jpg" alt="Creative Destruction" width="100%">
-
 # 💥 Creative Destruction Reborn
 
 **Rejoue à Creative Destruction PC, hors ligne, sur ton propre ordinateur.**<br>
@@ -15,6 +13,8 @@
 ### [⬇️ Télécharger / Download](https://github.com/crasyimperior/creative-destruction-reborn/releases/latest)
 
 [🇫🇷 Français](#-français) · [🇬🇧 English](#-english)
+
+<img src="docs/banner.jpg" alt="Creative Destruction" width="100%">
 
 </div>
 
