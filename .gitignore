@@ -1,0 +1,13 @@
+# Only the Reborn package is tracked: never commit game files.
+/*
+!/.gitignore
+!/README.md
+!/Installer - Install.bat
+!/Lancer hors ligne - Play Offline.bat
+!/Desinstaller - Uninstall.bat
+!/reborn/
+
+reborn/server/save/
+reborn/server/logs/
+reborn/backup/
+__pycache__/

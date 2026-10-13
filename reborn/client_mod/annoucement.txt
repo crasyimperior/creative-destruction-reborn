@@ -1,0 +1,50 @@
+<ANNOUNCEMENT>
+<LANGUAGE name="fr">
+<VERSION>295</VERSION>
+<TITLE>Bienvenue sur Creative Destruction : Reborn</TITLE>
+<CONTENT>
+#GBIENVENUE, EXPLORATEUR !#l
+
+Les serveurs officiels se sont éteints le 27 juin 2022…
+mais l'île de Creative Destruction n'a jamais vraiment disparu.
+
+Tu joues sur une #Grecréation locale et hors ligne#l du jeu :
+        #G- Ton propre serveur tourne sur ton PC#l
+        #G- Aucun compte, aucune connexion à NetEase#l
+        #G- 999 999 999 diamants, or et étoiles#l
+        #G- Tous les skins, tenues, armes, parachutes et véhicules débloqués#l
+
+Le monde est toujours en reconstruction : certaines fonctions
+(matchmaking, amis, classements) arrivent au fur et à mesure.
+
+Construis. Détruis. Recommence.
+Bonne partie, et que la tempête soit de ton côté !
+
+        #GCreative Destruction : Reborn - édition locale#l
+</CONTENT>
+</LANGUAGE>
+<LANGUAGE name="en">
+<VERSION>295</VERSION>
+<TITLE>Welcome to Creative Destruction: Reborn</TITLE>
+<CONTENT>
+#GWELCOME BACK, EXPLORER!#l
+
+The official servers went dark on June 27, 2022...
+but the island of Creative Destruction never truly disappeared.
+
+You are playing a #Glocal, offline recreation#l of the game:
+        #G- Your own server runs on your PC#l
+        #G- No account, no connection to NetEase#l
+        #G- 999,999,999 diamonds, gold and stars#l
+        #G- Every skin, outfit, weapon, glider and vehicle unlocked#l
+
+The world is still being rebuilt: some features
+(matchmaking, friends, leaderboards) are coming step by step.
+
+Build. Destroy. Repeat.
+Have fun, and may the storm be on your side!
+
+        #GCreative Destruction: Reborn - local edition#l
+</CONTENT>
+</LANGUAGE>
+</ANNOUNCEMENT>
