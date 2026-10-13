@@ -246,4 +246,6 @@ Then you can delete the `reborn` folder and the `.bat` files.
 <br>
 <sub>❤️ Projet de fans pour la préservation du jeu, non affilié à NetEase. Il te faut ta propre copie du jeu.<br>
 Fan project for game preservation, not affiliated with NetEase. You need your own copy of the game.</sub>
+<br><br>
+🔧 Rétro-ingénierie avec / Reverse engineering with <a href="https://github.com/morluto/rea">REA</a> — <a href="https://github.com/morluto/rea">github.com/morluto/rea</a>
 </div>
