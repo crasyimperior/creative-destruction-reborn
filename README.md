@@ -9,6 +9,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Game](https://img.shields.io/badge/game-3.0.210.0-8A2BE2?style=for-the-badge)
+![Made with Claude](https://img.shields.io/badge/made%20with-Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 
 ### [⬇️ Télécharger / Download](https://github.com/crasyimperior/creative-destruction-reborn/releases/latest)
 
@@ -237,6 +238,11 @@ Then you can delete the `reborn` folder and the `.bat` files.
 </details>
 
 <div align="center">
+<br>
+
+🤖 **Projet réalisé entièrement avec [Claude](https://claude.ai) (Anthropic)** : rétro-ingénierie du jeu, serveur hors ligne, mod client et ce README.<br>
+*Built entirely with [Claude](https://claude.ai) (Anthropic): game reverse engineering, offline server, client mod and this README.*
+
 <br>
 <sub>❤️ Projet de fans pour la préservation du jeu, non affilié à NetEase. Il te faut ta propre copie du jeu.<br>
 Fan project for game preservation, not affiliated with NetEase. You need your own copy of the game.</sub>
