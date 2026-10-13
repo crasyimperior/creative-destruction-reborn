@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/banner.jpg" alt="Creative Destruction" width="100%">
+
 # 💥 Creative Destruction Reborn
 
 **Rejoue à Creative Destruction PC, hors ligne, sur ton propre ordinateur.**<br>
