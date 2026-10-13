@@ -77,8 +77,12 @@ Les fichiers d'origine sont sauvegardés dans `reborn\backup\`.
 **2.** Dans le jeu : **Confirmer** → **Jouer**. Crée ton personnage si on te le demande.
 
 **3.** Pour une partie : **Lancer** → tu arrives sur l'île de départ.
-Appuie sur <kbd>²</kbd> (sous <kbd>Échap</kbd>), tape `start` puis <kbd>Entrée</kbd> :
+Ouvre la console, tape `start` puis <kbd>Entrée</kbd> :
 compte à rebours → présentation des joueurs → bus → saut 🪂
+
+> [!TIP]
+> **⌨️ Console** : appuie sur <kbd>²</kbd> (la touche sous <kbd>Échap</kbd>, clavier AZERTY).
+> Sur certains claviers (QWERTY…), c'est la touche <kbd>~</kbd>.
 
 ### ✅ Ce qui fonctionne
 
@@ -165,8 +169,12 @@ The original files are backed up into `reborn\backup\`.
 **2.** In game: **Confirm** → **Play**. Create your character if asked.
 
 **3.** For a match: **Start** → you land on the starting island.
-Press <kbd>²</kbd> (key under <kbd>Esc</kbd> on AZERTY keyboards), type `start` then <kbd>Enter</kbd>:
+Open the console, type `start` then <kbd>Enter</kbd>:
 countdown → players presentation → bus → jump 🪂
+
+> [!TIP]
+> **⌨️ Console**: press <kbd>~</kbd> (the key under <kbd>Esc</kbd> on QWERTY keyboards).
+> On AZERTY keyboards it is the <kbd>²</kbd> key.
 
 ### ✅ Working
 
