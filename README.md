@@ -79,7 +79,9 @@ Les fichiers d'origine sont sauvegardés dans `reborn\backup\`.
 
 **2.** Dans le jeu : **Confirmer** → **Jouer**. Crée ton personnage si on te le demande.
 
-**3.** Pour une partie : **Lancer** → tu arrives sur l'île de départ.
+**3.** Avant de lancer : sous **SOLO**, le bouton **BOTS** règle le nombre de bots (0 à 99).
+
+**4.** Pour une partie : **Lancer** → tu arrives sur l'île de départ avec les bots.
 Ouvre la console, tape `start` puis <kbd>Entrée</kbd> :
 compte à rebours → présentation des joueurs → bus → saut 🪂
 
@@ -87,23 +89,36 @@ compte à rebours → présentation des joueurs → bus → saut 🪂
 > **⌨️ Console** : appuie sur <kbd>²</kbd> (la touche sous <kbd>Échap</kbd>, clavier AZERTY).
 > Sur certains claviers (QWERTY…), c'est la touche <kbd>~</kbd>.
 
+| Commande | Effet |
+|---|---|
+| `start` | Lance le compte à rebours de la partie |
+| `bots 30` | Nombre de bots pour la prochaine partie (0 à 99) |
+| `botview` | Voir les bots à travers les murs + liste des plus proches (distance, direction) |
+| `noclip` | Vol libre sans collisions : touche de saut = monter, s'accroupir = descendre, vitesse x6 |
+
 ### ✅ Ce qui fonctionne
 
 - 🔓 Connexion sans compte NetEase, lobby, profil, changement de pseudo
 - 💎 999 999 999 diamants / or / étoiles, **tous les skins et objets débloqués**
 - 👕 Équiper tenues et skins, bouton ♂/♀ dans le profil pour changer de personnage
-- 🪂 Partie : île de départ, compte à rebours, présentation, bus, saut en parachute, pioche
+- 🤖 **Bots (jusqu'à 99)** : ils arrivent sur l'île, courent, sautent, donnent des coups de pioche, dansent,
+  passent dans la présentation, sautent du bus à des moments différents, ramassent des armes et **se tirent dessus**
+- 🪂 Partie : île de départ, compte à rebours, présentation, bus, saut en parachute
+- 🎁 **Butin** : armes + munitions, soins et boucliers au sol, **coffres dans les maisons**
+  (toujours une arme, ses munitions et un soin)
+- 🔫 Ramasser des armes et des objets, tirer
+- 🪓 **Décor destructible** (arbres, rochers, maisons) qui donne des matériaux
+- 🧱 **Construction** : 10 matériaux par pièce
+- ⚡ Anti-triche et télémétrie NetEase désactivés (moins de saccades)
 
 ### 🗺️ Prévu pour la suite
 
 | | Fonctionnalité | Description |
 |:-:|---|---|
-| 🤖 | **Bots** | Adversaires contrôlés par le serveur qui se déplacent, ramassent du butin et attaquent |
-| 🏆 | **Vraie partie battle royale** | Contre des bots, du bus jusqu'au dernier survivant, avec écran de victoire |
-| 🎁 | **Butin au sol** | Armes, munitions, soins et matériaux répartis sur la carte |
-| 🔫 | **Armes et dégâts** | Tir, points de vie, armure, éliminations |
+| 🏆 | **Vraie fin de partie** | Dernier survivant, écran de victoire |
+| 🎯 | **Les bots t'attaquent** | Pour l'instant ils ne tirent que sur les autres bots |
+| 💥 | **Dégâts sur toi** | Points de vie, bouclier, soins utilisables |
 | 🌪️ | **Zone** | Qui se resserre pendant la partie |
-| 🧱 | **Construction** | Gérée par le serveur |
 
 <sub>Pas prévu pour l'instant : amis, classement, boutique (inutile : tout est déjà débloqué).</sub>
 
@@ -171,7 +186,9 @@ The original files are backed up into `reborn\backup\`.
 
 **2.** In game: **Confirm** → **Play**. Create your character if asked.
 
-**3.** For a match: **Start** → you land on the starting island.
+**3.** Before starting: under **SOLO**, the **BOTS** button sets the number of bots (0 to 99).
+
+**4.** For a match: **Start** → you land on the starting island with the bots.
 Open the console, type `start` then <kbd>Enter</kbd>:
 countdown → players presentation → bus → jump 🪂
 
@@ -179,23 +196,36 @@ countdown → players presentation → bus → jump 🪂
 > **⌨️ Console**: press <kbd>~</kbd> (the key under <kbd>Esc</kbd> on QWERTY keyboards).
 > On AZERTY keyboards it is the <kbd>²</kbd> key.
 
+| Command | Effect |
+|---|---|
+| `start` | Starts the match countdown |
+| `bots 30` | Number of bots for the next match (0 to 99) |
+| `botview` | See bots through walls + list of the closest ones (distance, direction) |
+| `noclip` | Free flight without collisions: jump key = up, crouch = down, 6x speed |
+
 ### ✅ Working
 
 - 🔓 Login without a NetEase account, lobby, profile, rename
 - 💎 999,999,999 diamonds / gold / stars, **every skin and item unlocked**
 - 👕 Equip outfits and skins, ♂/♀ button on the profile page to switch character
-- 🪂 Match: starting island, countdown, presentation, bus, parachute jump, pickaxe
+- 🤖 **Bots (up to 99)**: they join the island, run, jump, swing pickaxes, dance, show up in the
+  presentation, jump off the bus at different times, pick up guns and **shoot each other**
+- 🪂 Match: starting island, countdown, presentation, bus, parachute jump
+- 🎁 **Loot**: guns + ammo, heals and shields on the ground, **chests inside houses**
+  (always a gun, its ammo and a heal)
+- 🔫 Pick up guns and items, shoot
+- 🪓 **Destructible scenery** (trees, rocks, houses) that gives materials
+- 🧱 **Building**: 10 materials per piece
+- ⚡ NetEase anti-cheat and telemetry turned off (fewer stutters)
 
 ### 🗺️ Planned
 
 | | Feature | Description |
 |:-:|---|---|
-| 🤖 | **Bots** | Server-controlled opponents that move around, pick up loot and fight |
-| 🏆 | **Real battle royale match** | Against bots, from the bus to the last one standing, with a victory screen |
-| 🎁 | **Ground loot** | Weapons, ammo, heals and materials spread across the map |
-| 🔫 | **Weapons and damage** | Shooting, health, armor, eliminations |
+| 🏆 | **Real end of match** | Last one standing, victory screen |
+| 🎯 | **Bots attack you** | For now they only shoot other bots |
+| 💥 | **Damage on you** | Health, shield, usable heals |
 | 🌪️ | **Storm** | Shrinking during the match |
-| 🧱 | **Building** | Handled by the server |
 
 <sub>Not planned for now: friends, leaderboards, shop (useless anyway: everything is unlocked).</sub>
 
@@ -229,6 +259,9 @@ Then you can delete the `reborn` folder and the `.bat` files.
 | Path | What |
 |---|---|
 | `reborn/server/` | local login / game / battle server (Python 3) |
+| `reborn/server/bots.py` | bots: names, outfits, bus jumps, flight, walking |
+| `reborn/server/loot.py` | chests, ground loot, inventory |
+| `reborn/server/data/loot.json` | loot table (guns, ammo, heals, shields) |
 | `reborn/server/data/protocol.json` | network message layouts (ids and field types) |
 | `reborn/server/data/items.json` | item ids and types (used to unlock everything) |
 | `reborn/client_mod/switches.nxs` | compiled client mod (source in `client_mod/src/switches.py`) |

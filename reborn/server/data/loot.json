@@ -1,0 +1,528 @@
+{
+ "_doc": "generated from ca/info_item.py + ca/info_gun.py (tools: see bots.py / loot.py)",
+ "guns": [
+  {
+   "item_id": 1101,
+   "name": "92F手枪",
+   "rarity": 2,
+   "capacity": 15,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1102,
+   "name": "92F手枪",
+   "rarity": 3,
+   "capacity": 15,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1103,
+   "name": "92F手枪",
+   "rarity": 4,
+   "capacity": 15,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1111,
+   "name": "P357左轮枪",
+   "rarity": 2,
+   "capacity": 6,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1112,
+   "name": "P357左轮枪",
+   "rarity": 3,
+   "capacity": 6,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1113,
+   "name": "P357左轮枪",
+   "rarity": 4,
+   "capacity": 6,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1121,
+   "name": "P229手枪",
+   "rarity": 2,
+   "capacity": 10,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1122,
+   "name": "P229手枪",
+   "rarity": 3,
+   "capacity": 10,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1123,
+   "name": "P229手枪",
+   "rarity": 4,
+   "capacity": 13,
+   "ammo": 2001,
+   "class": "11"
+  },
+  {
+   "item_id": 1201,
+   "name": "DTR霰弹枪",
+   "rarity": 2,
+   "capacity": 6,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1202,
+   "name": "DTR霰弹枪",
+   "rarity": 3,
+   "capacity": 6,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1203,
+   "name": "DTR霰弹枪",
+   "rarity": 4,
+   "capacity": 8,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1211,
+   "name": "S1897霰弹枪",
+   "rarity": 1,
+   "capacity": 5,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1212,
+   "name": "S1897霰弹枪",
+   "rarity": 2,
+   "capacity": 5,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1213,
+   "name": "S1897霰弹枪",
+   "rarity": 3,
+   "capacity": 5,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1214,
+   "name": "S1897霰弹枪",
+   "rarity": 4,
+   "capacity": 5,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1215,
+   "name": "S1897霰弹枪",
+   "rarity": 5,
+   "capacity": 5,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1221,
+   "name": "M1915霰弹枪",
+   "rarity": 3,
+   "capacity": 2,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1222,
+   "name": "M1915霰弹枪",
+   "rarity": 4,
+   "capacity": 2,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1223,
+   "name": "M1915霰弹枪",
+   "rarity": 5,
+   "capacity": 2,
+   "ammo": 2005,
+   "class": "12"
+  },
+  {
+   "item_id": 1301,
+   "name": "UMP9冲锋枪",
+   "rarity": 2,
+   "capacity": 30,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1302,
+   "name": "UMP9冲锋枪",
+   "rarity": 3,
+   "capacity": 30,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1303,
+   "name": "UMP9冲锋枪",
+   "rarity": 4,
+   "capacity": 35,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1311,
+   "name": "UZI冲锋枪",
+   "rarity": 1,
+   "capacity": 35,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1312,
+   "name": "UZI冲锋枪",
+   "rarity": 2,
+   "capacity": 35,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1313,
+   "name": "UZI冲锋枪",
+   "rarity": 3,
+   "capacity": 40,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1321,
+   "name": "PL等离子冲锋枪",
+   "rarity": 3,
+   "capacity": 10,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1322,
+   "name": "PL等离子冲锋枪",
+   "rarity": 4,
+   "capacity": 12,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1331,
+   "name": "C111刺针枪",
+   "rarity": 4,
+   "capacity": 25,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1332,
+   "name": "C111刺针枪",
+   "rarity": 5,
+   "capacity": 30,
+   "ammo": 2001,
+   "class": "13"
+  },
+  {
+   "item_id": 1401,
+   "name": "M16步枪",
+   "rarity": 1,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1402,
+   "name": "M16步枪",
+   "rarity": 2,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1403,
+   "name": "M16步枪",
+   "rarity": 3,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1411,
+   "name": "SCAR步枪",
+   "rarity": 1,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1412,
+   "name": "SCAR步枪",
+   "rarity": 2,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1413,
+   "name": "SCAR步枪",
+   "rarity": 3,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1414,
+   "name": "SCAR步枪",
+   "rarity": 4,
+   "capacity": 35,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1415,
+   "name": "SCAR步枪",
+   "rarity": 5,
+   "capacity": 40,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1421,
+   "name": "VHS步枪",
+   "rarity": 2,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1422,
+   "name": "VHS步枪",
+   "rarity": 3,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1423,
+   "name": "VHS步枪",
+   "rarity": 4,
+   "capacity": 35,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1431,
+   "name": "XM8步枪",
+   "rarity": 3,
+   "capacity": 20,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1432,
+   "name": "XM8步枪",
+   "rarity": 4,
+   "capacity": 25,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1433,
+   "name": "XM8步枪",
+   "rarity": 5,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1441,
+   "name": "AK47步枪",
+   "rarity": 2,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1442,
+   "name": "AK47步枪",
+   "rarity": 3,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1443,
+   "name": "AK47步枪",
+   "rarity": 4,
+   "capacity": 35,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1444,
+   "name": "AK47步枪",
+   "rarity": 5,
+   "capacity": 40,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1451,
+   "name": "ST40超能步枪",
+   "rarity": 3,
+   "capacity": 30,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1452,
+   "name": "ST40超能步枪",
+   "rarity": 4,
+   "capacity": 35,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1453,
+   "name": "ST40超能步枪",
+   "rarity": 5,
+   "capacity": 40,
+   "ammo": 2002,
+   "class": "14"
+  },
+  {
+   "item_id": 1501,
+   "name": "AWP狙击枪",
+   "rarity": 3,
+   "capacity": 5,
+   "ammo": 2003,
+   "class": "15"
+  },
+  {
+   "item_id": 1502,
+   "name": "AWP狙击枪",
+   "rarity": 4,
+   "capacity": 8,
+   "ammo": 2003,
+   "class": "15"
+  },
+  {
+   "item_id": 1503,
+   "name": "AWP狙击枪",
+   "rarity": 5,
+   "capacity": 10,
+   "ammo": 2003,
+   "class": "15"
+  },
+  {
+   "item_id": 1511,
+   "name": "PSG-1狙击枪",
+   "rarity": 3,
+   "capacity": 15,
+   "ammo": 2003,
+   "class": "15"
+  },
+  {
+   "item_id": 1512,
+   "name": "PSG-1狙击枪",
+   "rarity": 4,
+   "capacity": 15,
+   "ammo": 2003,
+   "class": "15"
+  },
+  {
+   "item_id": 1521,
+   "name": "VSS狙击枪",
+   "rarity": 4,
+   "capacity": 15,
+   "ammo": 2003,
+   "class": "15"
+  },
+  {
+   "item_id": 1522,
+   "name": "VSS狙击枪",
+   "rarity": 5,
+   "capacity": 20,
+   "ammo": 2003,
+   "class": "15"
+  },
+  {
+   "item_id": 1531,
+   "name": "M82重型狙击枪",
+   "rarity": 5,
+   "capacity": 20,
+   "ammo": 2003,
+   "class": "15"
+  }
+ ],
+ "ammo": {
+  "2001": 30,
+  "2002": 30,
+  "2003": 10,
+  "2005": 10
+ },
+ "heals": [
+  {
+   "item_id": 4001,
+   "amount": 5
+  },
+  {
+   "item_id": 4002,
+   "amount": 1
+  }
+ ],
+ "shields": [
+  {
+   "item_id": 4101,
+   "amount": 1
+  },
+  {
+   "item_id": 4102,
+   "amount": 2
+  },
+  {
+   "item_id": 4103,
+   "amount": 3
+  }
+ ],
+ "throwables": [
+  {
+   "item_id": 1801,
+   "amount": 2
+  }
+ ],
+ "materials": [
+  {
+   "item_id": 7001,
+   "amount": 30
+  },
+  {
+   "item_id": 7002,
+   "amount": 20
+  },
+  {
+   "item_id": 7003,
+   "amount": 10
+  }
+ ],
+ "chest_item_id": 9100
+}
