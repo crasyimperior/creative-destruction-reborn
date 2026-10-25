@@ -640,6 +640,102 @@ def _answer_layers_query(resp):
     send_server_cmd('@layers %s %s' % (qid, ';'.join(out)))
 
 
+# ---------------------------------------------------------------- custom outfits (local, optional)
+# Extra full outfits whose models sit in Documents/res/char/player/<folder>/ (the engine loads extra
+# models from Documents/res). Listed in Documents/custom_outfits.json, never shipped:
+#   [[suit_id, "folder", "Display name", first_part_id, "description"], ...]   (female outfits, 4 parts each)
+CUSTOM_OUTFITS_FILE = 'Documents/custom_outfits.json'
+
+
+def _load_custom_outfits():
+    import os
+    import json
+    if not os.path.isfile(CUSTOM_OUTFITS_FILE):
+        return []
+    with open(CUSTOM_OUTFITS_FILE) as f:
+        rows = json.load(f)
+    return [(int(r[0]), str(r[1]), unicode(r[2]), int(r[3]), unicode(r[4]) if len(r) > 4 else u'') for r in rows]
+
+
+CUSTOM_OUTFITS = []
+CUSTOM_PARTS = [  # (stem, sub_type, slot, suffix)
+    ('face01', 2, 'clothes_face', u'visage'),
+    ('hair01', 1, 'clothes_hair', u'cheveux'),
+    ('upper01', 3, 'clothes_upper', u'haut'),
+    ('leg01', 4, 'clothes_leg', u'bas'),
+]
+
+
+def _custom_outfit_rows(suit, folder, name, first_part, desc=u''):
+    root = 'char/player/%s/female_%s/female_%s_' % (folder, folder, folder)
+    icon = 'ui1/icon/%s/%d.png' % (folder, suit)
+    common = {'gender': 2, 'icon': icon, 'rarity': 4, 'camera': 'camera2', 'camera_fov': 35.0,
+              'fit_type': 2, 'ui_scale': 1.0}
+    part_ids = [first_part + k for k in range(len(CUSTOM_PARTS))]
+    rows = {suit: dict(common, id=suit, type=3, slot='clothes_all', item_list=part_ids, name=name,
+                       content=u'Tenue', desc=desc, score=21, display_on=1)}
+    for item_id, (stem, sub_type, slot, suffix) in zip(part_ids, CUSTOM_PARTS):
+        base = root + stem
+        rows[item_id] = dict(common, id=item_id, type=4, sub_type=sub_type, slot=slot,
+                             name=u'%s - %s' % (name, suffix), content=suffix.capitalize(), desc=u'',
+                             score=7, model_path=base + '.gim', lod_model_path=base + '_lod01.gim',
+                             # the lobby "show" material (_zs.mtg, shader g91_character_xuanren) renders
+                             # these fan models black: use the normal material everywhere, as the wardrobe does
+                             default_mtg=base + '.mtg', default_mtg_show=base + '.mtg',
+                             lobby1_mtg_show=base + '.mtg', lobby2_mtg_show=base + '.mtg',
+                             default_skin_path=base + '_d.dds')
+    return rows, root + 'face01.gim'
+
+
+def _install_custom_outfits():
+    import os
+    import ca.info_game_item as table
+    if getattr(table, '_offline_outfits', False):
+        return
+    table._offline_outfits = True
+    CUSTOM_OUTFITS[:] = _load_custom_outfits()
+    if not CUSTOM_OUTFITS:
+        return
+    added = []
+    for suit, folder, name, first_part, desc in CUSTOM_OUTFITS:
+        rows, probe = _custom_outfit_rows(suit, folder, name, first_part, desc)
+        if not os.path.isfile(os.path.join('Documents', 'res', *probe.split('/'))):
+            continue  # model files not there: the outfit would be invisible
+        for item_id, row in rows.items():
+            if table.gData.get(item_id) is None:
+                table.gData[item_id] = row
+        added.append(name)
+    offline_log('custom outfits:', ', '.join(added) or 'none (no model files in Documents\\res)')
+    _install_custom_outfit_colors()
+
+
+def _custom_item_ids():
+    ids = set()
+    for suit, _, _, first_part, _ in CUSTOM_OUTFITS:
+        ids.add(suit)
+        ids.update(first_part + k for k in range(len(CUSTOM_PARTS)))
+    return ids
+
+
+def _install_custom_outfit_colors():
+    """The lobby tints hair meshes with the character's hair colour (params['color']); official hair
+    textures are grey and made for it, the fan models are already painted and turned black.
+    Keep the custom parts untinted (the wardrobe preview never tints them, that is why it looked fine)."""
+    from components.fashion_component import FashionComponent
+    if getattr(FashionComponent.on_add_mesh, '_offline_patched', False):
+        return
+    orig = FashionComponent.on_add_mesh
+    custom = _custom_item_ids()
+
+    def on_add_mesh(self, slot, item_id, model_path, mtg_path=None, params=None):
+        if item_id in custom and params and 'color' in params:
+            params = dict(params)
+            params['color'] = (1.0, 1.0, 1.0, 1.0)
+        return orig(self, slot, item_id, model_path, mtg_path, params)
+    on_add_mesh._offline_patched = True
+    FashionComponent.on_add_mesh = on_add_mesh
+
+
 # ---------------------------------------------------------------- no anti-cheat, no telemetry
 def _noop(*args, **kwargs):
     return None
@@ -1238,6 +1334,11 @@ def _poll_debug_traces():
             except Exception:
                 import traceback
                 offline_log('no telemetry install failed', traceback.format_exc())
+            try:
+                _install_custom_outfits()
+            except Exception:
+                import traceback
+                offline_log('custom outfits install failed', traceback.format_exc())
             return
     except Exception as e:
         offline_log('debug traces failed', repr(e))

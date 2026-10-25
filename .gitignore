@@ -5,6 +5,7 @@
 !/Installer - Install.bat
 !/Lancer hors ligne - Play Offline.bat
 !/Desinstaller - Uninstall.bat
+!/DXVK - Vulkan On-Off.bat
 !/reborn/
 !/docs/
 
@@ -12,3 +13,4 @@ reborn/server/save/
 reborn/server/logs/
 reborn/backup/
 __pycache__/
+reborn/server/data/custom_items.json

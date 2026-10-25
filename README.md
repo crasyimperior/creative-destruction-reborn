@@ -110,6 +110,7 @@ compte à rebours → présentation des joueurs → bus → saut 🪂
 - 🪓 **Décor destructible** (arbres, rochers, maisons) qui donne des matériaux
 - 🧱 **Construction** : 10 matériaux par pièce
 - ⚡ Anti-triche et télémétrie NetEase désactivés (moins de saccades)
+- 🖥️ **DXVK (Vulkan) en option** : `DXVK - Vulkan On-Off.bat` fait tourner le DirectX 9 du jeu sur Vulkan (souvent plus de FPS) ; relance-le pour revenir en arrière
 
 ### 🗺️ Prévu pour la suite
 
@@ -217,6 +218,7 @@ countdown → players presentation → bus → jump 🪂
 - 🪓 **Destructible scenery** (trees, rocks, houses) that gives materials
 - 🧱 **Building**: 10 materials per piece
 - ⚡ NetEase anti-cheat and telemetry turned off (fewer stutters)
+- 🖥️ **Optional DXVK (Vulkan)**: `DXVK - Vulkan On-Off.bat` runs the game's DirectX 9 over Vulkan (often more FPS); run it again to switch back
 
 ### 🗺️ Planned
 
@@ -267,6 +269,7 @@ Then you can delete the `reborn` folder and the `.bat` files.
 | `reborn/client_mod/switches.nxs` | compiled client mod (source in `client_mod/src/switches.py`) |
 | `reborn/client_mod/annoucement.txt` | the welcome message |
 | `reborn/tools/install.py` | installer / uninstaller |
+| `reborn/dxvk/` | DXVK 3.1.1 `d3d9.dll` (32-bit, zlib license) used by `DXVK - Vulkan On-Off.bat` |
 
 </details>
 

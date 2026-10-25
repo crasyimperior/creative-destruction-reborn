@@ -245,14 +245,42 @@ with open(os.path.join(HERE, "data", "items.json"), encoding="utf-8") as _f:
 
 WARDROBE = bots.Wardrobe(ITEM_INFO, DEFAULT_BODY, DEFAULT_CID)
 
+
+CUSTOM_SUITS = set()   # full outfits from data/custom_items.json (they bring their own hair)
+
+
+def load_custom_items():
+    """Optional data/custom_items.json: extra outfits the client knows about (added by a client-side
+    script, e.g. fan-made models). Same format as items.json; they are owned like everything else.
+    Kept out of WARDROBE so bots never wear them."""
+    path = os.path.join(HERE, "data", "custom_items.json")
+    if not os.path.exists(path):
+        return
+    with open(path, encoding="utf-8") as f:
+        extra = {int(k): v for k, v in json.load(f).items() if not k.startswith("_")}
+    ITEM_INFO.update(extra)
+    CUSTOM_SUITS.update(i for i, v in extra.items() if v.get("slot") == "clothes_all")
+    ALL_ITEMS.extend(i for i in sorted(extra) if i not in ALL_ITEMS)
+    log("custom items: %s" % ", ".join(str(i) for i in sorted(extra)), console=True)
+
+
+load_custom_items()
+
 ITEM_TYPE_PARACHUTE, ITEM_TYPE_CLOTHES_BASE, ITEM_TYPE_FLYING_MOUNT = 5, 11, 907
 FULL_SUIT_SLOT, PART_SLOTS = "clothes_all", ("clothes_upper", "clothes_leg")
+DEFAULT_HEAD_SLOTS = ("clothes_hair", "clothes_face")
 
 
 def equipped_character(gender):
     """Body parts + worn clothes for a gender: defaults overridden by what the player equipped."""
     worn = dict(DEFAULT_BODY[gender])
     worn.update({k: v for k, v in SAVE.get("character", {}).get(str(gender), {}).items()})
+    # The client always starts from the character base's own hair and face (clothes_base item_list).
+    # A hair / face sent in the fashion data counts as picked on purpose and wins over an outfit's
+    # own one in the lobby (FashionComponent: have_item_hair), so only send them when not the default.
+    for s_ in DEFAULT_HEAD_SLOTS:
+        if worn.get(s_) == DEFAULT_BODY[gender][s_]:
+            worn.pop(s_)
     return {k: v for k, v in worn.items() if v}
 
 
@@ -346,6 +374,9 @@ def on_use_item(conn, msg):
         # a full outfit replaces top+bottom and vice versa (item_id 0 = slot removed on the client)
         if slot == FULL_SUIT_SLOT:
             changes.update({s: 0 for s in PART_SLOTS})
+            for s_ in DEFAULT_HEAD_SLOTS:  # default hair / face still known by the client: clear them
+                if worn.get(s_, DEFAULT_BODY[gender][s_]) == DEFAULT_BODY[gender][s_]:
+                    changes[s_] = 0
         elif slot in PART_SLOTS:
             changes[FULL_SUIT_SLOT] = 0
             for other in PART_SLOTS:  # coming back from a full outfit: restore the default other half
